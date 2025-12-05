@@ -1,6 +1,12 @@
-import React from 'react';
 import {
-  View, Text, Image, TextInput, TouchableOpacity, StyleSheet, ScrollView, SafeAreaView,} from 'react-native';
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput, TouchableOpacity,
+  View,
+} from 'react-native';
 
 // Placeholder images - replace with actual assets
 const profilePic = { uri: 'https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=User' };
@@ -64,7 +70,7 @@ const HomeScreen = () => {
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.cardsContainer}>
             <View style={styles.card}>
-              <Image source={mountVeraImg} style={styles.cardImage} />
+<Image source={mountVeraImg} style={styles.cardImage} />              
               <View style={styles.cardContent}>
                 <Text style={styles.cardTitle}>Mount Vera</Text>
                 <View style={styles.ratingContainer}>
