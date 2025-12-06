@@ -1,10 +1,13 @@
-import { useEffect } from "react";
-import { router } from "expo-router";
+import { useEffect } from 'react';
+import { router } from 'expo-router';
 
 export default function Index() {
   useEffect(() => {
-    console.log("Index running...");
-    router.replace("/explore/explore1"); // first screen
+    const timer = setTimeout(() => {
+      router.replace('/explore/explore1');
+    }, 50); // small delay for mounting
+
+    return () => clearTimeout(timer);
   }, []);
 
   return null;

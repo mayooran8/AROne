@@ -166,7 +166,11 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#F7F9FC" },
+  container: { 
+    flex: 1, 
+    backgroundColor: "#F7F9FC",
+    
+ },
   scrollContent: { flexGrow: 1, paddingBottom: 100 },
 
   /* HEADER */
