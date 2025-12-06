@@ -18,7 +18,7 @@ export default function Index() {
     <View style={styles.bottomOverlay}>
       <Text style={styles.subject}>Ready to explore {"\n"}beyond boundaries?</Text>
         <TouchableOpacity style={styles.button}
-        onPress={() => router.push("/register")}>
+        onPress={() => router.push("/login/register")}>
           <Text style={styles.buttonText}>Your Journey Starts Here ✈️</Text>
           </TouchableOpacity>
           </View>

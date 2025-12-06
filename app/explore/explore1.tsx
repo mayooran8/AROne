@@ -1,6 +1,7 @@
 import { router } from "expo-router";
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+
 export default function Index() {
   return (
     <ImageBackground
@@ -18,7 +19,7 @@ export default function Index() {
       </View>  
     
         <TouchableOpacity style={styles.button}
-        onPress={() => router.push("/explore")}><Text style={styles.buttonText}>Explore</Text>
+        onPress={() => router.push("/explore/explore2")}><Text style={styles.buttonText}>Explore</Text>
           </TouchableOpacity>
       
       

@@ -93,7 +93,7 @@ export default function Register() {
       });
 
       Alert.alert("Success", "Registration Successful!");
-      router.push("/login");
+      router.push("/login/login");
 
       // Clear fields
       setName("");
@@ -222,7 +222,7 @@ export default function Register() {
           </View>
 
           <TouchableOpacity
-            onPress={() => router.push("/login")}
+            onPress={() => router.push("/login/login")}
             style={styles.loginLink}
           >
             <Text style={styles.linkText}>Already have an account? Login here!</Text>

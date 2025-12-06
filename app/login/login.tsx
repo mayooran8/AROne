@@ -55,8 +55,8 @@ export default function Login() {
       }
 
       // Login success
-      Alert.alert("Success", "Login Successful!");
-      router.push("/home");
+     
+      router.push("/(tabs)/home");
 
     } catch (error: any) {
       console.error("Login Error:", error);
@@ -99,7 +99,7 @@ export default function Login() {
               placeholderTextColor="#999"
             />
 
-            <Text style={styles.registerLink} onPress={() => router.push("/register")}>
+            <Text style={styles.registerLink} onPress={() => router.push("/login/register")}>
               Don't have an account? Register here!
             </Text>
           </View>
