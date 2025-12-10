@@ -100,7 +100,7 @@ export default function Home() {
       <Text style={styles.subText}>{item.days || 0} Days</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push(`../details/${item.id}`)}
+        onPress={() => router.push(`../../packages/package`)}
       >
         <Text style={styles.buttonText}>See Details</Text>
       </TouchableOpacity>

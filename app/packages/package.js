@@ -1,11 +1,12 @@
+import { router } from "expo-router";
 import {
-  Button,
   Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
-  View,
+  TouchableOpacity,
+  View
 } from "react-native";
 
 const PackageDetailsScreen = () => {
@@ -43,14 +44,18 @@ const PackageDetailsScreen = () => {
             archaeological significance.
           </Text>
 
-          <Text style={styles.price}>Rs 999</Text>
+          <Text style={styles.price}>50,000 LKR</Text>
 
-          <Button title="Book Now" color="#4CAF50" onPress={() => {}} />
+
+  <TouchableOpacity style={styles.button}
+         onPress={() => router.push("/packages/bookingForm")}><Text style={styles.buttonText}>Book Now</Text>
+           </TouchableOpacity>
+
         </View>
 
         {/* MAP SECTION */}
         <View style={styles.mapSection}>
-          <Text style={styles.sectionTitle}>Your Four Locations</Text>
+          <Text style={styles.sectionTitle}>Your Tour Locations</Text>
 
           <Image
             source={{
@@ -92,10 +97,6 @@ const PackageDetailsScreen = () => {
         </View>
       </ScrollView>
 
-      {/* Bottom Navigation Placeholder */}
-      <View style={styles.bottomNav}>
-        <Text>Nav Items</Text>
-      </View>
     </SafeAreaView>
   );
 };
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#00BFA5",
+    color: "#007A8C",
     marginBottom: 16,
   },
 
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
   rating: { fontSize: 14, color: "#FFD700" },
 
   recommendations: { padding: 16 },
-  recTitle: { fontSize: 16, marginBottom: 8, color: "#00BFA5" },
+  recTitle: { fontSize: 16, marginBottom: 8, color: "#007A8C" },
 
   bottomNav: {
     position: "absolute",
@@ -168,6 +169,8 @@ const styles = StyleSheet.create({
     borderTopColor: "#EEE",
     alignItems: "center",
   },
+   button: { marginTop: 12, backgroundColor: "#007A8C", paddingVertical: 12, borderRadius: 12, alignItems: "center" },
+    buttonText: { color: "#fff", fontWeight: "700", fontSize: 16 },
 });
 
 export default PackageDetailsScreen;

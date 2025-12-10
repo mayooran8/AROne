@@ -1,5 +1,5 @@
 import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { router } from "expo-router";
 const AccountScreen = () => {
     const profilePic = "https://images.unsplash.com/photo-1688888745596-da40843a8d45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww";
   return (
@@ -24,7 +24,7 @@ const AccountScreen = () => {
             style={styles.icon}
           />
           <Text style={styles.infoLabel}>Phone Number</Text>
-          <Text style={styles.infoValue}>+94 765865658</Text>
+          <Text style={styles.infoValue}>+94 764826961</Text>
         </View>
         <View style={styles.infoRow}>
           <Image
@@ -32,7 +32,7 @@ const AccountScreen = () => {
             style={styles.icon}
           />
           <Text style={styles.infoLabel}>Email Address</Text>
-          <Text style={styles.infoValue}>mayooq@gmail.com</Text>
+          <Text style={styles.infoValue}>tmayooran8@gmail.com</Text>
         </View>
         <View style={styles.infoRow}>
           <Image
@@ -40,7 +40,7 @@ const AccountScreen = () => {
             style={styles.icon}
           />
           <Text style={styles.infoLabel}>Address</Text>
-          <Text style={styles.infoValue}>Nalur Jaffa</Text>
+          <Text style={styles.infoValue}>No 104. Nallur Road Jaffna</Text>
         </View>
       </View>
 
@@ -51,7 +51,8 @@ const AccountScreen = () => {
       <TouchableOpacity style={styles.buttonHelp}>
         <Text style={styles.buttonText}>Help & Support</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonLogout}>
+      <TouchableOpacity style={styles.buttonLogout}
+      onPress={() => router.push("../explore/explore1")}>
         <Text style={styles.buttonTextLogout}>Log Out</Text>
       </TouchableOpacity>
 

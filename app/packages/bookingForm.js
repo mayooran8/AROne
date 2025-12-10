@@ -1,12 +1,11 @@
-import React from 'react';
-import { SafeAreaView, View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 const BookingScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Complete Your Booking</Text>
+        <Text style={styles.headerTitle}>Book Your Tour</Text>
         <Text style={styles.headerPoints}>ⓘ 200 points</Text>
       </View>
 
@@ -16,26 +15,26 @@ const BookingScreen = () => {
         <Text style={styles.sectionTitle}>Personal Information</Text>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Full Name</Text>
-          <TextInput style={styles.input} value="Mayoo" editable={false} />
+          <TextInput style={styles.input} placeholder='Your Name'  />
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Email Address</Text>
-          <TextInput style={styles.input} value="mayoo@example.com" editable={false} />
+          <TextInput style={styles.input}  placeholder='Your Address'/>
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Phone Number</Text>
-          <TextInput style={styles.input} value="+94 70000000" editable={false} />
+          <TextInput style={styles.input} placeholder='Your Phone No'/>
         </View>
 
         {/* Booking Details Section */}
         <Text style={styles.sectionTitle}>Booking Details</Text>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Number of Persons</Text>
-          <TextInput style={styles.input} value="1 Person" editable={false} />
+          <TextInput style={styles.input} placeholder='No of persons' />
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Travel Date</Text>
-          <TextInput style={styles.input} placeholder="Select travel date" placeholderTextColor="#888" />
+          <TextInput style={styles.input} placeholder="Your travel date" placeholderTextColor="#888" />
         </View>
 
         {/* Payment Method Section */}
@@ -50,13 +49,7 @@ const BookingScreen = () => {
         <Text style={styles.confirmButtonText}>Confirm Booking - 50.00 LKR</Text>
       </TouchableOpacity>
 
-      {/* Bottom Navigation */}
-      <View style={styles.bottomNav}>
-        <Text style={styles.navItem}>Home</Text>
-        <Text style={styles.navItem}>Booking</Text>
-        <Text style={styles.navItem}>Saved</Text>
-        <Text style={styles.navItem}>Account</Text>
-      </View>
+      
     </SafeAreaView>
   );
 };
